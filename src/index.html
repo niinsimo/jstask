@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta name="interface" content="desktop" />
+
+    <title>Slots</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'/>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/slot.css" />
+
+</head>
+<body>
+<div id="viewport">
+    <div id="container" style="display: inline-block;">
+        <div id="header">
+
+        </div>
+        <div style="float: left;">
+            <table id="playtable">
+                <tr>
+                    <th>Pay table</th>
+                    <th>Top line</th>
+                    <th>Center line</th>
+                    <th>Bottom line</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/rsz_cherry.png">
+                        <img src="img/rsz_cherry.png">
+                        <img src="img/rsz_cherry.png">
+                    </td>
+                    <td id="cherryTop">2000</td>
+                    <td id="cherryCenter">1000</td>
+                    <td id="cherryBottom">4000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/rsz_7.png">
+                        <img src="img/rsz_7.png">
+                        <img src="img/rsz_7.png">
+                    </td>
+                    <td id="sevenTop">150</td>
+                    <td id="sevenCenter">150</td>
+                    <td id="sevenBottom">150</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/anycombo.png">
+                        <img src="img/rsz_7.png">
+                        <img src="img/rsz_cherry.png">
+                    </td>
+                    <td id="cherryAndSevenTop">75</td>
+                    <td id="cerryAndSevenCenter">75</td>
+                    <td id="cherryAndSevenBottom">75</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/rsz_3xbar.png">
+                        <img src="img/rsz_3xbar.png">
+                        <img src="img/rsz_3xbar.png">
+                    </td>
+                    <td id="3xbarTop">50</td>
+                    <td id="3xbarCenter">50</td>
+                    <td id="3xbarBottom">50</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/rsz_2xbar.png">
+                        <img src="img/rsz_2xbar.png">
+                        <img src="img/rsz_2xbar.png">
+                    </td>
+                    <td id="2xbarTop">20</td>
+                    <td id="2xbarCenter">20</td>
+                    <td id="2xbarBottom">20</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/rsz_bar.png">
+                        <img src="img/rsz_bar.png">
+                        <img src="img/rsz_bar.png">
+                    </td>
+                    <td id="barTop">10</td>
+                    <td id="barCenter">10</td>
+                    <td id="barBottom">10</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/anycombo.png">
+                        <img src="img/rsz_bar.png">
+                        <img src="img/rsz_2xbar.png">
+                        <img src="img/rsz_3xbar.png">
+                    </td>
+                    <td id="comboBarTop">5</td>
+                    <td id="comboBarCenter">5</td>
+                    <td id="comboBarBottom">5</td>
+                </tr>
+            </table>
+        </div>
+        <div id="reels" style="float: middle;">
+            <canvas id="canvas1" width="121" height="300"></canvas>
+            <canvas id="canvas2" width="121" height="300"></canvas>
+            <canvas id="canvas3" width="121" height="300"></canvas>
+            <div id="overlay">
+                <div id="winline"></div>
+            </div>
+        </div>
+    </div>
+    <div style="float:right; margin-top: 230px; margin-right: 200px; font-size: 60px;">
+        <h1 id="score"></h1>
+        <button id="addCoin" style="cursor: pointer; background: none; color: inherit; border: none;">
+            <img src="img/coin.png">
+        </button>
+    </div>
+    <button id="play">Play</button>
+    <div id="buttons" style="margin-left: 30px;">
+        <p>Random mode</p>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+<script type="text/javascript" src="js/slot.js"></script>
+<script type="text/javascript">$(function() { SlotGame(); });</script>
+</body>
+</html>
